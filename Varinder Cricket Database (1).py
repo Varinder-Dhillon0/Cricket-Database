@@ -1,4 +1,3 @@
-
 file1=""
 vidpath = ""
 document1=""
@@ -95,9 +94,6 @@ def clear():
                         window.geometry("700x500")
                         
 def details():
-
-
-        try:
       
                 jersey= ejersey.get()
                 name= (ename.get())
@@ -127,12 +123,8 @@ def details():
                 ejersey.focus_set()
                 for_list()
                 
-        except mysql.connector.errors.IntegrityError:
-                tk.messagebox.showinfo("Error","Jersey No. Already Exists")
-                
 
 def show_document():
-
 
     global document1
     x= document1
@@ -147,8 +139,6 @@ def show_document():
     ejersey.focus_set()
 
 def show():
-
-        try:      
                 global file1
                 global document1
                 
@@ -179,8 +169,6 @@ def show():
                                 thread = threading.Thread(target=streaming, args=(vidpath,))
                                 thread.daemon = True
                                 thread.start()
-        except:
-                    pass
 
 def update():
      
